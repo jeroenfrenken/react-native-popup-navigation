@@ -71,6 +71,7 @@ const Navigator = (props) => {
     }
 
     const page = pages.find(p => p.name === popUpScreen.name)
+    const firstSnapPoint = popUpScreen.props.firstSnapPoint ?? 0;
 
     const renderContent = () => {
       return React.createElement(page.screen, { ...popUpScreen.props, dismiss })
@@ -84,6 +85,7 @@ const Navigator = (props) => {
 
         <PopUp
           ref={popupRef}
+          firstSnapPoint={firstSnapPoint}
           snapPoints={page.snapPoints || [50, height]}
           renderContent={renderContent}
           dismiss={dismiss}
