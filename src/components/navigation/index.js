@@ -27,7 +27,6 @@ const Navigator = (props) => {
 
   const animateBackground = (value) => {
     Animated.spring(backgroundRef.current, {
-      toValue: 1,
       tension: 68,
       friction: 12,
       toValue: value,
@@ -37,7 +36,7 @@ const Navigator = (props) => {
 
   useEffect(() => {
     if (popUpScreen != null) {
-      if (popUpScreen.props !== undefined && popUpScreen.props.hideBackground !== undefined) return;
+      if (popUpScreen.props !== undefined && popUpScreen.props.hideBackground !== undefined && popUpScreen.props.hideBackground) return;
       animateBackground(1)
     } else {
       animateBackground(0)
