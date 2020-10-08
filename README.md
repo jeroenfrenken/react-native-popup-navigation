@@ -1,6 +1,3 @@
-![](gifs/2.gif)  |  ![](gifs/1.gif) |
-:---------------:|:----------------:|
-
 # Installation
 
 Open a Terminal in the project root and run:
