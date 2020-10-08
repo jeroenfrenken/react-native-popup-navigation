@@ -36,7 +36,7 @@ const Navigator = (props) => {
   }
 
   useEffect(() => {
-    if (popUpScreen.props.hideBackground !== undefined) return;
+    if (popUpScreen !== null && popUpScreen.props !== undefined && popUpScreen.props.hideBackground !== undefined) return;
 
     if (popUpScreen != null) {
       animateBackground(1)
