@@ -78,7 +78,10 @@ const Navigator = (props) => {
 
     return (
       <View style={[{ flex: 1, position: 'absolute', top: 0, left: 0 }]}>
-        <StatusBar backgroundColor={'#000'} animated barStyle="light-content" />
+        {popUpScreen.props.hideBackground === undefined && (
+          <StatusBar backgroundColor={'#000'} animated barStyle="light-content" />
+        )}
+
         <PopUp
           ref={popupRef}
           snapPoints={page.snapPoints || [50, height]}
